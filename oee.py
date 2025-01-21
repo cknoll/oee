@@ -80,6 +80,9 @@ I1207 = p.create_item(
     R4__is_instance_of=I1104["SI base unit"]
 )
 
+# express that there are no more SI base units
+p.close_class_with_R51(I1104["SI base unit"])
+
 I1208 = p.create_item(
     R1__has_label="volt",
     R2__has_description="...",
