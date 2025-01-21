@@ -34,7 +34,7 @@ I1104 = p.create_item(
     R2__has_description="class for units which are one of the seven base units defined within the "
     "International System of Units",
     R3__is_subclass_of=I1103["SI unit"],
-    # R000__is_associated_with="https://www.wikidata.org/wiki/Q12457",
+    R72__is_generally_related_to="https://www.wikidata.org/wiki/Q12457",
 )
 
 
