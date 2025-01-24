@@ -15,6 +15,57 @@ I1101 = p.create_item(
     )
 )
 
+I110101 = p.create_item(
+    R1__has_label="Electric Current",
+    R2__has_description="The flow of electric charge through a conductor."
+)
+
+I110102 = p.create_item(
+    R1__has_label="Voltage",
+    R2__has_description="The difference in electric potential between two points in a circuit."
+)
+
+I110103 = p.create_item(
+    R1__has_label="Resistance",
+    R2__has_description="The opposition to the flow of electric current in a conductor."
+)
+
+I110104 = p.create_item(
+    R1__has_label="Capacitance",
+    R2__has_description="The ability of a component or system to store an electric charge."
+)
+
+I110105 = p.create_item(
+    R1__has_label="Inductance",
+    R2__has_description="The property of a conductor that opposes changes in current."
+)
+
+I110106 = p.create_item(
+    R1__has_label="Power",
+    R2__has_description="The rate at which electrical energy is converted into another form of energy."
+)
+
+I110107 = p.create_item(
+    R1__has_label="Energy",
+    R2__has_description="The capacity to do work or transfer heat."
+)
+
+I110108 = p.create_item(
+    R1__has_label="Charge",
+    R2__has_description="The quantity of electricity that is transported in an electric current."
+)
+
+I110109 = p.create_item(
+    R1__has_label="Conductance",
+    R2__has_description="The ability of a conductor to allow current to flow through it (inverse of resistance)."
+)
+
+I110110 = p.create_item(
+    R1__has_label="Impedance",
+    R2__has_description="The total opposition to the flow of current in an alternating current (AC) circuit, including both resistance and reactance."
+)
+
+
 I1102 = p.create_item(
     R1__has_label="physical unit",
     R2__has_description="...",
@@ -131,4 +182,49 @@ I1302 = p.create_item(
     R1200__has_associated_SI_unit=I1208["volt"]
 )
 
+
+
+
+## Statement number 1
+## Current is the flow of electric charge in a circuit.
+
+## Statement number 2
+## Resistance opposes the flow of electric current in a circuit.
+
+## Statement number 3
+## A capacitor stores electrical energy in an electric field.
+
+## Statement number 4
+## An inductor stores energy in a magnetic field when current flows through it.
+
+## Statement number 5
+## Alternating current (AC) changes direction periodically, while direct current (DC) flows in one direction.
+
+## Statement number 6
+## Electrical circuits consist of components like resistors, capacitors, inductors, and power sources.
+
+## Statement number 7
+## Capacitance is the ability to store electric charge in a system when voltage is applied.
+
+## Statement number 8
+## Inductance is the ability of a coil or circuit to oppose changes in current by generating a voltage.
+
+
+## Statement number 9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 p.end_mod()
+
+
