@@ -8,12 +8,13 @@ p.start_mod(__URI__)
 # TOP-LEVEL CONCEPTS
 I1101 = p.create_item(
     R1__has_label="physical quantity",
-    R2__has_description="...",
+    R2__has_description="A fundamental quantity that can be measured and expressed in terms of units, such as length, mass, time, current, voltage, etc.",
     R4__is_instance_of=p.I2["Metaclass"],
     R18__has_usage_hint=(
         "Items such as 'voltage' or 'time' should be R4__is_instance_of-related to this item."
     )
 )
+
 I110101 = p.create_item(
     R1__has_label="Electric Current",
     R2__has_description="The flow of electric charge through a conductor.",
@@ -78,17 +79,12 @@ I110110 = p.create_item(
 
 I1102 = p.create_item(
     R1__has_label="physical unit",
-    R2__has_description="...",
+    R2__has_description="A unit of measurement used to quantify a physical quantity, such as the meter for length or the second for time.",
     R4__is_instance_of=p.I2["Metaclass"],
-    R18__has_usage_hint= "Items such as 'Volt' or 'second' should be R4__is_instance_of-related "
+    R18__has_usage_hint="Items such as 'Volt' or 'second' should be R4__is_instance_of-related "
     "to this item or subclasses of it."
 )
 
-I110201 = p.create_item(
-    R1__has_label="Ampere",
-    R2__has_description="The SI unit of electric current.",
-    R3__is_subclass_of=I1102["physical unit"]
-)
 
 I110202 = p.create_item(
     R1__has_label="Volt",
@@ -215,72 +211,50 @@ I1104 = p.create_item(
 
 I1201 = p.create_item(
     R1__has_label="second",
-    R2__has_description="...",
+    R2__has_description="The SI base unit of time. It is defined as the duration of 9,192,631,770 periods of radiation corresponding to the transition between two hyperfine levels of the ground state of the cesium-133 atom.",
     R4__is_instance_of=I1104["SI base unit"]
 )
 
 I1202 = p.create_item(
     R1__has_label="meter",
-    R2__has_description="...",
+    R2__has_description="The SI base unit of length. It is defined as the distance that light travels in a vacuum in 1/299,792,458 seconds.",
     R4__is_instance_of=I1104["SI base unit"]
 )
 
 I1203 = p.create_item(
     R1__has_label="kilogram",
-    R2__has_description="...",
+    R2__has_description="The SI base unit of mass. It is defined as the mass of the international prototype of the kilogram, a platinum-iridium cylinder kept at the International Bureau of Weights and Measures.",
     R4__is_instance_of=I1104["SI base unit"]
 )
 
 I1204 = p.create_item(
     R1__has_label="ampere",
-    R2__has_description="...",
+    R2__has_description="The SI base unit of electric current. It is defined by taking the fixed numerical value of the elementary charge to be 1.602176634 × 10^-19 when expressed in coulombs.",
     R4__is_instance_of=I1104["SI base unit"]
 )
 
 I1205 = p.create_item(
     R1__has_label="kelvin",
-    R2__has_description="...",
+    R2__has_description="The SI base unit of thermodynamic temperature. It is defined as 1/273.16 of the thermodynamic temperature of the triple point of water.",
     R4__is_instance_of=I1104["SI base unit"]
 )
 
 I1206 = p.create_item(
     R1__has_label="mole",
-    R2__has_description="...",
+    R2__has_description="The SI base unit of the amount of substance. It is defined as the amount of substance that contains as many entities as there are atoms in 12 grams of carbon-12.",
     R4__is_instance_of=I1104["SI base unit"]
 )
 
 I1207 = p.create_item(
     R1__has_label="candela",
-    R2__has_description="...",
+    R2__has_description="The SI base unit of luminous intensity. It is defined as the luminous intensity of a source that emits monochromatic radiation of frequency 540 × 10^12 hertz and has a radiant intensity of 1/683 watt per steradian.",
     R4__is_instance_of=I1104["SI base unit"]
 )
 
 # express that there are no more SI base units
 p.close_class_with_R51(I1104["SI base unit"])
 
-I1208 = p.create_item(
-    R1__has_label="volt",
-    R2__has_description="...",
-    R4__is_instance_of=I1103["SI unit"]
-)
 
-I1209 = p.create_item(
-    R1__has_label="watt",
-    R2__has_description="...",
-    R4__is_instance_of=I1103["SI unit"]
-)
-
-I1210 = p.create_item(
-    R1__has_label="coulomb",
-    R2__has_description="...",
-    R4__is_instance_of=I1103["SI unit"]
-)
-
-I1211 = p.create_item(
-    R1__has_label="ohm",
-    R2__has_description="...",
-    R4__is_instance_of=I1103["SI unit"]
-)
 
 R1200 = p.create_relation(
     R1__has_label="has associated SI unit",
@@ -293,7 +267,7 @@ R1200 = p.create_relation(
 
 I1301 = p.create_item(
     R1__has_label="electrical current",
-    R2__has_description="...",
+    R2__has_description="The flow of electric charge, typically measured in amperes. It is the rate at which charge flows through a conductor or circuit.",
     R4__is_instance_of=I1101["physical quantity"],
     R1200__has_associated_SI_unit=I1204["ampere"],
 )
@@ -301,11 +275,10 @@ I1301 = p.create_item(
 
 I1302 = p.create_item(
     R1__has_label="electrical voltage",
-    R2__has_description="...",
+    R2__has_description="The difference in electric potential between two points in a circuit, typically measured in volts. It drives the flow of electric current.",
     R4__is_instance_of=I1101["physical quantity"],
-    R1200__has_associated_SI_unit=I1208["volt"]
+    R1200__has_associated_SI_unit=I110202["Volt"]
 )
-
 
 
 
